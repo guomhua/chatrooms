@@ -6,6 +6,7 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 var cache = {};
+var port = process.env.PORT || 5176
 
 // Send 404 error response.
 function send404(response) {
@@ -61,7 +62,7 @@ var server = http.createServer(function (request, response) {
 	});
 
 // Start the HTTP server.
-server.listen(5176, function () {
+server.listen(port, function () {
 	console.log("Server listening on port 5176.");
 });
 
