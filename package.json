@@ -5,5 +5,9 @@
   "dependencies": {
 	"mime": "1.2.10",
 	"socket.io": "0.9.16"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
   }
 }
