@@ -76,4 +76,8 @@ $(document).ready(function () {
 		processUserInput(chatApp, socket);
 		return false;
 	});
+
+	$(window).unload(function () {
+		chatApp.exit($('#room').text());
+	});
 });

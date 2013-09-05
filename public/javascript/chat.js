@@ -17,6 +17,12 @@ Chat.prototype.changeRoom = function (room) {
 	});
 };
 
+Chat.prototype.exit = function (room) {
+	this.socket.emit('disconnect', {
+		room : room
+	});
+};
+
 // Processing chat commands
 Chat.prototype.processCommand = function (command) {
 	var words = command.split(' ');
@@ -40,3 +46,4 @@ Chat.prototype.processCommand = function (command) {
 	}
 	return message;
 };
+
